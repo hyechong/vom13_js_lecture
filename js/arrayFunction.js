@@ -26,7 +26,7 @@ numbers.forEach((v) => {
 console.log(sum);
 
 // 2. map
-// - map 메서드는 콜백 함수의 파라미터로 배열의 요소를 반환하는 것을 forEach와 같지만 반환한 요소를 새로은 배열에 담아 return할 수 있다는 점이 다르다.
+// - map 메서드는 콜백 함수의 파라미터로 배열의 요소를 반환하는 것을 forEach와 같지만 반환한 요소를 새로운 배열에 담아 return할 수 있다는 점이 다르다.
 // - DOM요소 선택 시 map은 사용할 수 없으나, Array.from()을 사용할 수는 있다. 하지만 forEach로 쓰는 것이 더 효율적이다.
 const newArr = numbers.map((v, i, a) => {
   // console.log(v);

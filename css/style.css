@@ -1,0 +1,8 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+body{width: 100%; height: 100vh; background: #E0BBE4; position: fixed; left: 0; top: 0; display: flex; align-items: center; justify-content: center;}
+
+.wrapper {width: 60%; height: auto; display: flex; flex-direction: column;}
+.btns{width: 100%;height: auto;display: flex; column-gap: .25rem;}
+.btns .btn {width: 50%; padding: 1rem 0; border: 0; outline: 0; background: #957DAD; color: #fff; border-radius: 0;}
+.img-box{margin-top: .25rem; _padding: .25rem;_border: 1px solid #fff;}
+.img-box img{width: 100%;}
