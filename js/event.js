@@ -88,5 +88,14 @@ toTop.addEventListener('click', () => {
   });
 });
 
-// 5. mousemove event
+// 6. mousemove event
 // - sarah 참조
+
+// 7. hover effect
+const hoverEl = document.querySelector('.hover');
+hoverEl.addEventListener('mouseenter', function () {
+  this.style.background = 'yellow';
+});
+hoverEl.addEventListener('mouseleave', function () {
+  this.style.background = 'red';
+});
