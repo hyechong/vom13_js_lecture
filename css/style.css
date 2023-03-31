@@ -1,8 +1,18 @@
 *{margin: 0; padding: 0; box-sizing: border-box;}
-body{width: 100%; height: 100vh; background: #E0BBE4; position: fixed; left: 0; top: 0; display: flex; align-items: center; justify-content: center;}
+ul, ol{list-style: none;}
+body{width: 100%; height: 3000px; background: #E0BBE4; _position: fixed; left: 0; top: 0; display: flex; align-items: center; justify-content: flex-start; flex-direction: column;}
+
+header{width: 100%; height: auto; position: fixed;top: 0; left: 0; background: #957DAD; padding: 0 1.5rem; transition: all .3s;}
+header.active{background: #fff;}
+header.active ul li{color: black;}
+header ul{display: flex; column-gap: 1rem; justify-content: flex-end;}
+header ul li{padding: 1rem 0; font-size: 1.25rem; color: #fff; transition: all .3s;}
 
 .wrapper {width: 60%; height: auto; display: flex; flex-direction: column;}
 .btns{width: 100%;height: auto;display: flex; column-gap: .25rem;}
 .btns .btn {width: 50%; padding: 1rem 0; border: 0; outline: 0; background: #957DAD; color: #fff; border-radius: 0;}
 .img-box{margin-top: .25rem; _padding: .25rem;_border: 1px solid #fff;}
 .img-box img{width: 100%;}
+
+.top{position: fixed; right: 20px; bottom: 20px; background: #957DAD; display: none; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 50px; cursor: pointer;}
+.top span{color: #fff; font-size: 30px; font-weight: bold;}
