@@ -22,31 +22,43 @@
   <div id="b"></div>
   <div id="c"></div> -->
 
-<!-- <div class="wrapper">
+<div class="wrapper">
   <div class="btns">
     <button class="btn" id="dog">DOG</button>
     <button class="btn" id="cat">CAT</button>
-  </div> -->
+  </div>
   <div class="img-box">
     <img src="dog.jpg" alt="">
   </div>
-<!-- </div>
+</div>
 
-<div class="hollow">
+<!-- <div class="hollow">
   <button class="click-btn">like</button><br>
   <h1 class="num">0</h1>
 </div> -->
 
-<div class="key-area">
+<!-- <div class="key-area">
   <input type="text" class="input">
   <button type="button" class="key-btn">Press To Enter</button>
-</div>
+</div> -->
 
-<div class="top">
+<!-- <div class="top">
   <span>&#94;</span>
 </div>
 
-<div class="hover" style="position:fixed; width:100px; height:100px; top:50px; left:200px; background: red; z-index: 9999;"></div>
+<div class="hover" style="position:fixed; width:100px; height:100px; top:50px; left:200px; background: red; z-index: 9999;"></div> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script>
+    $(function(){
+      $('.btn').on('click', function(){
+        const nm = $(this).attr('id')
+        $('.img-box img').attr('src','');
+        $('.img-box img').attr('src',`${nm}.jpg`);
+      });
+    });
+  </script>
+
   <script src="js/event.js"></script>
+
 </body>
 </html>
