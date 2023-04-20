@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Sample</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    .wrapper{width: 100%; height: 100vh; background: #eee; display: flex; align-items: center; justify-content: center;}
+    .movies{display: flex; justify-content: center; column-gap: 10px;}
+    .movie{width: 20%; height: auto;}
+    .movie-img{width: 100%; height: auto;}
+    .movie-img img{width: 100%;}
+    .container{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: #888;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .wrapper-in{
+      position: absolute;
+      _top: -35px;
+      transform: scale(1.5);
+    }
+    .loader{
+      height: 25px;
+    width: 1px;
+    position: absolute;
+    animation: rotate 3.5s linear infinite;
+    }
+    .loader .dot{
+      top: 30px;
+    height: 7px;
+    width: 7px;
+    background: #fff;
+    border-radius: 50%;
+    position: relative;}
+      
+    @keyframes rotate {
+      30%{
+        transform: rotate(220deg);
+      }
+      40%{
+      transform: rotate(450deg);
+        opacity: 1;
+    }
+    75%{
+      transform: rotate(720deg);
+      opacity: 1;
+    }
+    76%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 0;
+      transform: rotate(0deg);
+    }
+    }
+    .loader:nth-child(1){
+      animation-delay: 0.15s;
+    }
+    .loader:nth-child(2){
+      animation-delay: 0.3s;
+    }
+    .loader:nth-child(3){
+      animation-delay: 0.45s;
+    }
+    .loader:nth-child(4){
+      animation-delay: 0.6s;
+    }
+    .loader:nth-child(5){
+      animation-delay: 0.75s;
+    }
+    .loader:nth-child(6){
+      animation-delay: 0.9s;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="movies">
+      <!-- <div class="movie">
+        <div class="movie-img">
+          <img src="medium-cover.jpeg" alt="">
+        </div>
+        <div class="movie-title">
+          <a href="#">Poor Boy</a>
+        </div>
+      </div>
+      <div class="movie">
+        <div class="movie-img">
+          <img src="medium-cover.jpeg" alt="">
+        </div>
+        <div class="movie-title">
+          <a href="#">Poor Boy</a>
+        </div>
+      </div>
+      <div class="movie">
+        <div class="movie-img">
+          <img src="medium-cover.jpeg" alt="">
+        </div>
+        <div class="movie-title">
+          <a href="#">Poor Boy</a>
+        </div>
+      </div>
+      <div class="movie">
+        <div class="movie-img">
+          <img src="medium-cover.jpeg" alt="">
+        </div>
+        <div class="movie-title">
+          <a href="#">Poor Boy</a>
+        </div>
+      </div>
+      <div class="movie">
+        <div class="movie-img">
+          <img src="medium-cover.jpeg" alt="">
+        </div>
+        <div class="movie-title">
+          <a href="#">Poor Boy</a>
+        </div>
+      </div> -->
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="wrapper-in">
+       <div class="loader">
+          <div class="dot"></div>
+       </div>
+       <div class="loader">
+          <div class="dot"></div>
+       </div>
+       <div class="loader">
+          <div class="dot"></div>
+       </div>
+       <div class="loader">
+          <div class="dot"></div>
+       </div>
+       <div class="loader">
+          <div class="dot"></div>
+       </div>
+       <div class="loader">
+          <div class="dot"></div>
+       </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script>
+    $(document).ajaxComplete(function(){
+      $('.container').fadeOut();
+    });
+  </script>
+  <script src="movieSample.js"></script>
+</body>
+</html>
